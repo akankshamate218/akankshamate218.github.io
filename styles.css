@@ -13,9 +13,8 @@ body {
     width: 350px;
     background-color: rgb(224, 168, 48);
     color: white;
-    padding: 50px;
+    padding: 20px;
     border: 10px solid rgb(83, 32, 9);
-    padding: 20px; 
     margin: 50px;
 }
 
@@ -31,9 +30,15 @@ h1, h2 {
     font-size: 1.5rem;
 }
 
+/* Adjusted spacing for sections */
+section {
+    margin-bottom: 20px;
+}
+
 /* Adjusted spacing for the unordered list and its items */
 ul {
     margin-top: 10px;
+    padding-left: 20px;
 }
 
 ul li {
