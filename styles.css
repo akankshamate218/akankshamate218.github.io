@@ -1,35 +1,47 @@
+/* Set the base font and background for the entire page */
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: auto;
+    align-items: center;    
+    min-height: 100vh;
 }
+
+/* Styled the main container with a specific width, background color, and border */
 .container {   
-    width: 15%;
+    width: 350px;
     background-color: rgb(224, 168, 48);
     color: white;
     padding: 50px;
     border: 10px solid rgb(83, 32, 9);
+    padding: 20px; 
+    margin: 50px;
 }
-.name{
+
+/* Centered the name and set a larger font size for emphasis */
+.name {
     text-align: center;
-    font-size: 3rem;
-}
-h1, h2 {
-    font-weight: bold;
     font-size: 2rem;
 }
-ul {
-    margin-top: 10px;
-}
-ul li {
-    margin-bottom: 5px;
+
+/* Added bold styling and consistent font size for headings */
+h1, h2 {
+    font-weight: bold;
     font-size: 1.5rem;
 }
 
-p{
-    font-size: 1.5rem;
+/* Adjusted spacing for the unordered list and its items */
+ul {
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+/* Set a consistent font size for paragraphs */
+p {
+    font-size: 1rem;
 }
