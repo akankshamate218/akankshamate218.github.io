@@ -1,32 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akanksha Mate</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tip Calculator (Tax + Tip)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Main content container -->
-    <div class="container">
-        <h1 class="name">Akanksha P. Mate</h1>
+  <div class="container">
+    <main>
+      <h1>💰 Tip Calculator</h1>
+      <form id="tipForm">
 
-        <!-- Introduction Section -->
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>"I grew up in Nashik, Maharashtra—a city known for its culture and vineyards. I love photography, cooking dishes from around the world, and traveling to new places. These passions help me see the world differently and stay curious every day.".</p>
-        </section>
+        <!-- Extra Credit: Currency selection -->
+        <h4>Currency Conversion:</h2>
+        <h4>$1 USD = €0.95 EUR | $1 USD = ₹85 INR </h4>
 
-        <!-- Education and Background Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>I am currently pursuing my third semester in the Master’s program for Information Technology and Management.</li>
-                <li>I hold a Bachelor’s degree in Computer Engineering from India.</li>
-                <li>My academic interests focus on data analysis and web development.</li>
-                <li>During my engineering studies, I developed a web application as part of a project which drove my interest in web development.</li>
-            </ul>
-        </section>
-    </div>
+        <!-- 1) Bill Total -->
+        <div class="form-group">
+          <label for="billTotal">Bill Total ($):</label>
+          <input type="text" id="billTotal" placeholder="Enter bill amount" />
+        </div>
+
+        <!-- 2) Total with 11% Tax -->
+        <div class="form-group">
+          <label for="totalWithTax">🧾 Total with 11% Tax ($):</label>
+          <input type="text" id="totalWithTax" disabled />
+        </div>
+
+        
+
+        <!-- 3) Currency Selection -->
+        <div class="form-group">
+          <label for="currencySelect">Select Currency:</label>
+          <select id="currencySelect">
+            <option value="">--Select--</option>
+            <option value="USD">USD ($)</option>
+            <option value="INR">INR (₹)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
+        </div>
+
+        <!-- 4) Tip Slider & Percentage -->
+        <div class="form-group">
+          <label for="tipSlider">Tip % (on Bill+Tax):</label>
+          <input type="range" id="tipSlider" min="0" max="100" value="15" />
+          <input type="text" id="tipPercentage" disabled />
+        </div>
+
+        <!-- 5) Tip Amount -->
+        <div class="form-group">
+          <label for="tipAmount">💡Tip Amount:</label>
+          <input type="text" id="tipAmount" disabled />
+        </div>
+
+        <!-- 6) Converted Tip Amount -->
+        <div class="form-group">
+          <label for="convertedTipAmount">Converted Tip Amount:</label>
+          <input type="text" id="convertedTipAmount" disabled />
+        </div>
+
+        <!-- 7) Total with Tip & Tax -->
+        <div class="form-group">
+          <label for="totalWithTipTax">💵 Total with Tip & Tax:</label>
+          <input type="text" id="totalWithTipTax" disabled />
+        </div>
+
+        <!-- 8) Converted Total with Tip & Tax -->
+        <div class="form-group">
+          <label for="convertedTotalWithTipTax">🧮 Converted Total with Tip & Tax:</label>
+          <input type="text" id="convertedTotalWithTipTax" disabled />
+        </div>
+
+        <p id="errorMsg" class="error"></p>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
